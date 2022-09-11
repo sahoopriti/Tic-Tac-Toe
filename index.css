@@ -1,0 +1,191 @@
+:root 
+{
+    --ColorA: #2c3e50;
+    --ColorB: #bdc3c7;
+    --ColorC: #1abc9c;
+    --ColorD: #f1c40f;
+    --ColorE: #34495e;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+html , body
+{
+    overflow: auto;
+}
+body
+{
+    background-color: var(--ColorA);
+}
+.Main
+{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Form
+{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: var(--ColorC);
+}
+.Form input , .BTN1
+{
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+.BTN1
+{
+    background-color: var(--ColorD);
+}
+.fa-right-from-bracket
+{
+    color: var(--ColorA);
+    position:relative;
+    transform: translate(-100px);
+    z-index: -100;
+}
+.BTN1:hover > .fa-right-from-bracket
+{
+    padding-right: 10px;
+    z-index: 100;
+    transform: translate(0px);
+    transition: all 0.3s ease;
+}
+.X , .Game-Box i
+{
+    color: #1abc9c;
+}
+.O , .Game-Box i
+{
+    color: #f1c40f;
+}
+.Turns
+{
+    color: white;
+    padding: 10px 0px;
+}
+.Turns , .Box
+{
+    border-radius: 10px;
+    background-color: var(--ColorE);
+    box-shadow: 0px 5px 5px rgba(63, 121, 207, 0.459);
+}
+.Game-Box
+{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.Game-Box span , .Game-Box i , .Game-Box .Box
+{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.Box
+{
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Game-Box
+{
+    transform:scale(0);
+    width: 0;
+}
+.Slide
+{
+    transform: scale(1);
+    transition: all 1s ease;
+}
+.fa-rotate-right
+{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.Make-None
+{
+    pointer-events: none;
+}
+.Heading
+{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-color: var(--ColorD);
+    color: #34495e;
+    padding: 10px;
+    border-radius: 10px;
+    /* display: none; */
+}
+.P1-Status , .P2-Status , .Tie-Status
+{
+    color: var(--ColorA);
+    border-radius: 10px;
+}
+.P1-Status
+{
+    background-color: var(--ColorC);
+}
+.Tie-Status
+{
+    background-color: var(--ColorB);
+}
+.P2-Status
+{
+    background-color: var(--ColorD);
+}
+
+.Alpha .Points , .Alpha .Points
+{
+    position:relative;
+    animation-name: TopUp;
+    animation-duration: .3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes TopUp
+{
+    from 
+    {
+        transform: translateY(20px);
+        z-index: -100;
+    }
+    to
+    {
+        transform: translateY(0px);
+        z-index: 100;
+    }
+}
+
+@media (max-width:450px)
+{
+    .Game-Box
+    {
+        grid-template-columns: repeat(3,80px);
+    }
+    .Box
+    {
+        height: 80px;
+    }
+    .Turns P
+    {
+        font-size: 10PX;
+    }
+}

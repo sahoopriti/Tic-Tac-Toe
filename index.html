@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <meta name="description" content="This is a Tic Tac Toe Game Playable Between Players. The Game Ranomly Select Between Two Players to Start Game">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="Images/Icon.png" type="image/x-icon">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="Main">
+        <form action="#" class="Form" onsubmit="GetPlayerNames() ; return false">
+            <input class="GetName P1" type="text" placeholder="Input Player #1 Name" required>
+            <input class="GetName P2" type="text" placeholder="Input Player #2 Name" required>
+            <button class="BTN1"><i class="fa-solid fa-right-from-bracket"></i>Submit</button>
+        </form>
+            <div class="Game-Box">
+                <div class="Heading">
+                    Nothing Predictable Yet !!
+                </div>
+                <div>
+                    <span class="X">X</span>
+                    <span class="O">O</span>
+                </div>
+                <div class="Turns">
+                    <p></p>
+                </div>
+                <div class="Empty">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+    
+                <div class="Box" id="A"></div>
+                <div class="Box" id="B"></div>
+                <div class="Box" id="C"></div>
+                <div class="Box" id="D"></div>
+                <div class="Box" id="E"></div>
+                <div class="Box" id="F"></div>
+                <div class="Box" id="G"></div>
+                <div class="Box" id="H"></div>
+                <div class="Box" id="I"></div>
+
+                <div class="P1-Status">
+                    <div class="Name">a</div>
+                    <div class="Points"></div>
+                </div>
+                <div class="Tie-Status">
+                    <div class="Name">Tie</div>
+                    <div class="Points"></div>
+                </div>
+                <div class="P2-Status">
+                    <div class="Name">a</div>
+                    <div class="Points"></div>
+                </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
